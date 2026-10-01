@@ -1,69 +1,79 @@
 import Image from "next/image";
+import { home } from "@/content/home";
+import { divisions } from "@/content/divisions";
+import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
+import { Reveal } from "@/components/ui/Reveal";
+import { Icon } from "@/components/ui/Icon";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { DivisionCard } from "@/components/cards/DivisionCard";
+import { Stats } from "@/components/sections/Stats";
+import { WorkPreview } from "@/components/sections/WorkPreview";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { CTA } from "@/components/sections/CTA";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      {/* Hero */}
+      <section className="relative isolate -mt-16 overflow-hidden bg-charcoal-950 text-white md:-mt-20">
+        <Image src={home.hero.image} alt="" fill priority sizes="100vw" className="object-cover opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal-950/30 via-charcoal-950/55 to-charcoal-950" aria-hidden />
+        <Container className="relative flex min-h-[92svh] flex-col justify-end pb-20 pt-40 md:pb-28">
+          <Reveal>
+            <p className="eyebrow text-white/60!">{home.hero.eyebrow}</p>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <h1 className="mt-6 max-w-4xl text-display-xl text-white">{home.hero.title}</h1>
+          </Reveal>
+          <Reveal delay={0.16}>
+            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">{home.hero.mission}</p>
+          </Reveal>
+          <Reveal delay={0.24}>
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <Button href={home.hero.primary.href} size="lg" variant="accent" arrow>{home.hero.primary.label}</Button>
+              <Button href={home.hero.secondary.href} size="lg" variant="secondary" className="border-white/25 text-white hover:bg-white/10">{home.hero.secondary.label}</Button>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* Divisions */}
+      <section id="divisions" className="scroll-mt-20 py-section">
+        <Container>
+          <SectionHeading eyebrow="Three divisions" title="One name. Three ways to work with us." description="Each division has its own focus and its own character. All of them share the same people and the same standard." />
+          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+            {divisions.map((d, i) => (
+              <Reveal key={d.key} delay={i * 0.1}>
+                <DivisionCard division={d} />
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* How we work */}
+      <section className="border-t border-line py-section">
+        <Container className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-20">
+          <SectionHeading eyebrow={home.howWeWork.eyebrow} title={home.howWeWork.title} description={home.howWeWork.description} />
+          <div className="grid gap-x-10 gap-y-9 sm:grid-cols-2">
+            {home.howWeWork.points.map((p, i) => (
+              <Reveal key={p.title} delay={i * 0.08}>
+                <span className="inline-flex size-11 items-center justify-center rounded-lg bg-accent-soft text-accent">
+                  <Icon name={p.icon} className="size-5" />
+                </span>
+                <h3 className="mt-5 font-sans text-lg font-semibold tracking-normal">{p.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{p.text}</p>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <Stats items={home.stats} />
+      <WorkPreview eyebrow="From the Studio" />
+      <Testimonials />
+      <CTA title={home.closing.title} text={home.closing.text} primary={home.closing.primary} secondary={home.closing.secondary} />
+    </>
   );
 }

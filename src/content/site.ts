@@ -11,7 +11,7 @@ export const siteConfig = {
   url: "https://mizan-qist-website.vercel.app",
   description:
     "Mizan Qist Limited is a technology company building its own products, with a creative and technology studio and a private advisory office that serve clients in Nigeria and the United Kingdom.",
-  email: "mizanqistltd@gmail.com", // TODO: switch to a company domain mailbox
+  email: "info@mizanqist.com",
   phones: [
     { label: "Nigeria", display: "+234 808 666 6206", href: "tel:+2348086666206" },
     { label: "United Kingdom", display: "+44 7931 814601", href: "tel:+447931814601" },
@@ -31,11 +31,19 @@ export const siteConfig = {
       hours: "Mon–Fri, 9:00–18:00 WAT",
     },
     {
-      city: "Birmingham",
-      country: "United Kingdom",
-      label: "UK presence",
+      city: "Lagos",
+      country: "Nigeria",
+      label: "Lagos office",
       // TODO: street address
-      lines: ["Colmore Row", "Birmingham, United Kingdom"],
+      lines: ["Victoria Island", "Lagos, Nigeria"],
+      hours: "Mon–Fri, 9:00–18:00 WAT",
+    },
+    {
+      city: "London",
+      country: "United Kingdom",
+      label: "London office",
+      // TODO: street address
+      lines: ["Mayfair", "London, United Kingdom"],
       hours: "Mon–Fri, 9:00–17:30 GMT",
     },
   ],

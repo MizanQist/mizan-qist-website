@@ -9,7 +9,7 @@ import { EnquiryForm } from "@/components/forms/EnquiryForm";
 
 export const metadata = pageMetadata({
   title: "Contact",
-  description: "Get in touch with Mizan Qist Labs, Studio or Private Office. Offices in Abuja, Nigeria and Birmingham, United Kingdom.",
+  description: "Get in touch with Mizan Qist Labs, Studio or Private Office. Offices in Abuja, Lagos and London.",
   path: "/contact",
 });
 

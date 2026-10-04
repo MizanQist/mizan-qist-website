@@ -7,7 +7,7 @@ export const divisions: Array<{
   href: string;
   pitch: string;
   description: string;
-  image: string; // PLACEHOLDER (Unsplash)
+  image: string; // local file under /public or an Unsplash PLACEHOLDER
 }> = [
   {
     key: "labs",
@@ -17,7 +17,7 @@ export const divisions: Array<{
     pitch: "Our own products, built for the markets we know best.",
     description:
       "The venture arm. Software, platforms and applications designed, built and operated by Mizan Qist across SaaS, fintech, marketplaces, AI and more.",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1600&q=80",
+    image: "/images/divisions/labs.jpg",
   },
   {
     key: "studio",

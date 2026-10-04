@@ -36,6 +36,11 @@ yarn-error.log*
 # vercel
 .vercel
 
+# raw image drops in the project root (convert into /public/images first)
+/*.png
+/*.jpg
+/*.jpeg
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

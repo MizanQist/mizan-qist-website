@@ -2,7 +2,7 @@ import { siteConfig } from "./site";
 
 export const home = {
   hero: {
-    eyebrow: "Technology company · Abuja & Birmingham",
+    eyebrow: "Technology company · Abuja, Lagos & London",
     title: "We build the products we believe in, and the brands that fund them.",
     mission:
       "Mizan Qist is a technology company. Our Labs build our own software and ventures; our Studio and Private Office serve clients whose work we are proud to put our name to.",

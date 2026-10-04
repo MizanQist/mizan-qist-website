@@ -4,7 +4,7 @@ export const legal = {
     title: "Privacy policy",
     updated: "1 October 2026",
     sections: [
-      { heading: "Who we are", text: "Mizan Qist Limited (RC 9569963) is a technology company headquartered in Abuja, Nigeria, with a presence in Birmingham, United Kingdom. This policy explains how we handle personal information submitted through this website." },
+      { heading: "Who we are", text: "Mizan Qist Limited (RC 9569963) is a technology company headquartered in Abuja, Nigeria, with offices in Lagos, Nigeria and London, United Kingdom. This policy explains how we handle personal information submitted through this website." },
       { heading: "What we collect", text: "When you submit an enquiry we collect the details you provide, such as your name, contact details and the content of your message. We also collect standard technical information, such as browser type and pages visited, to keep the site working well." },
       { heading: "How we use it", text: "We use your information to respond to your enquiry, to provide the services you request and to improve this website. We do not sell personal information. Private Office enquiries are handled confidentially and are not shared outside that division." },
       { heading: "Retention and your rights", text: "We keep enquiry details for as long as needed to respond and to keep a record of our dealings. You may ask us to access, correct or delete your information at any time by emailing us." },

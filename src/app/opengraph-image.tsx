@@ -16,7 +16,7 @@ export default async function OpenGraphImage() {
         <img src={logoSrc} alt="" width={520} height={129} />
         <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
           <div style={{ fontSize: 30, letterSpacing: 6, textTransform: "uppercase", color: "#bfbdbc" }}>Labs · Studio · Private Office</div>
-          <div style={{ fontSize: 24, color: "#8f8680" }}>{`Abuja, Nigeria · Birmingham, United Kingdom · ${siteConfig.rcNumber}`}</div>
+          <div style={{ fontSize: 24, color: "#8f8680" }}>{`Abuja · Lagos · London · ${siteConfig.rcNumber}`}</div>
         </div>
       </div>
     ),

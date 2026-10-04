@@ -14,7 +14,7 @@ import { CTA } from "@/components/sections/CTA";
 
 export const metadata = pageMetadata({
   title: "About",
-  description: "The story, mission and values of Mizan Qist Limited, how Labs, Studio and Private Office fit together, and where to find us in Abuja and Birmingham.",
+  description: "The story, mission and values of Mizan Qist Limited, how Labs, Studio and Private Office fit together, and where to find us in Abuja, Lagos and London.",
   path: "/about",
 });
 
@@ -98,8 +98,8 @@ export default function AboutPage() {
       {/* Offices */}
       <section className="border-t border-line py-section">
         <Container>
-          <SectionHeading eyebrow="Offices" title="Abuja and Birmingham." description="Headquartered in Nigeria's capital, with a presence in the UK's second city, we work across both time zones every day." />
-          <div className="mt-12 grid gap-4 md:grid-cols-2">
+          <SectionHeading eyebrow="Offices" title="Abuja, Lagos and London." description="Headquartered in Nigeria's capital, with offices in Lagos and London, we work across both time zones every day." />
+          <div className="mt-12 grid gap-4 md:grid-cols-3">
             {siteConfig.offices.map((o, i) => (
               <Reveal key={o.city} delay={i * 0.08}>
                 <address className="flex h-full gap-5 rounded-2xl border border-line bg-card p-7 not-italic">

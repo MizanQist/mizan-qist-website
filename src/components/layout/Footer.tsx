@@ -46,7 +46,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 grid gap-8 border-t border-line pt-10 md:grid-cols-3">
+        <div className="mt-14 grid gap-8 border-t border-line pt-10 sm:grid-cols-2 lg:grid-cols-4">
           {siteConfig.offices.map((o) => (
             <address key={o.city} className="text-sm not-italic leading-relaxed text-muted">
               <p className="font-medium text-fg">{o.city}, {o.country}</p>

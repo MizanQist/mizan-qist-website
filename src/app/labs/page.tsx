@@ -38,7 +38,7 @@ export default function LabsPage() {
             <Image src={labs.hero.image} alt="" fill priority sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 to-transparent" aria-hidden />
             <div className="absolute bottom-6 left-6 right-6 font-mono text-xs uppercase tracking-[0.2em] text-white/70">
-              <p>Abuja · Birmingham</p>
+              <p>Abuja · Lagos · London</p>
               <p className="mt-1 text-labs">{labs.products.length} products in the portfolio</p>
             </div>
           </Reveal>

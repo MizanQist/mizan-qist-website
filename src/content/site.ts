@@ -7,8 +7,8 @@ export const siteConfig = {
   legalName: "Mizan Qist Limited",
   tagline: "Where ideas become reality",
   rcNumber: "RC 9569963",
-  // Used for canonical URLs, Open Graph tags, sitemap and robots. TODO: switch to the custom domain once it is attached in Vercel.
-  url: "https://mizan-qist-website.vercel.app",
+  // Used for canonical URLs, Open Graph tags, sitemap and robots.
+  url: "https://mizanqist.com",
   description:
     "Mizan Qist Limited is a technology company building its own products, with a creative and technology studio and a private advisory office that serve clients in Nigeria and the United Kingdom.",
   email: "info@mizanqist.com",

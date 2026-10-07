@@ -7,6 +7,8 @@ import { pageMetadata } from "@/lib/metadata";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { CTA } from "@/components/sections/CTA";
+import { PreviewVideo } from "@/components/ui/PreviewVideo";
+import { BrowserFrame } from "@/components/ui/BrowserFrame";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -45,7 +47,13 @@ export default async function CaseStudyPage({ params }: Props) {
               Visit the live site <ArrowUpRight className="size-4" aria-hidden />
             </a>
           )}
-          {item.video ? (
+          {item.preview ? (
+            <Reveal delay={0.1} className="mt-12">
+              <BrowserFrame url={item.link}>
+                <PreviewVideo src={item.preview.video} poster={item.preview.poster} label={`${item.title} walkthrough`} />
+              </BrowserFrame>
+            </Reveal>
+          ) : item.video ? (
             <Reveal delay={0.1} className="mt-12 flex justify-center rounded-2xl bg-charcoal-900 p-3 md:p-6">
               <video src={item.video.src} poster={item.video.poster} controls playsInline preload="metadata" className={item.video.portrait ? "max-h-[80vh] rounded-xl" : "w-full rounded-xl"} />
             </Reveal>

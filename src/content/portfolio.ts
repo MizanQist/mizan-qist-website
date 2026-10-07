@@ -24,6 +24,8 @@ export type PortfolioItem = {
   link?: string;
   /** A film instead of a still: the card plays it muted, the case study shows a player. */
   video?: { src: string; poster: string; portrait?: boolean };
+  /** A desktop-width walkthrough recording of the site, shown in a browser frame on cards and the case study. */
+  preview?: { video: string; poster: string };
 };
 
 export const portfolio: PortfolioItem[] = [
@@ -37,11 +39,13 @@ export const portfolio: PortfolioItem[] = [
     featured: true,
     summary: "A dark, marine-toned digital brochure for a waterfront development in Park View, Lagos, with an interactive plan explorer and a master-plan map.",
     cover: "/work/the-atlantic-view/cover.jpg",
+    preview: { video: "/work/the-atlantic-view/preview.mp4", poster: "/work/the-atlantic-view/preview-poster.jpg" },
     gallery: ["/work/the-atlantic-view/shot-1.jpg"],
     challenge: "Sell waterfront apartments from drawings to buyers who would mostly see the project on a phone, and make the plans legible without a site visit.",
     approach: "We built a single-URL brochure site in a deep marine palette, redrew every floor plan as an interactive explorer, and placed hotspots on the master plan so each block opens its own story. A print edition was generated from the same source.",
     outcome: "A sales tool the developer can send on WhatsApp, with plans, specification and location in one place.",
     services: ["Web development", "Brochure design", "Graphic design"],
+    link: "https://the-atlantic-view.vercel.app/",
   },
   {
     slug: "villa-71",
@@ -53,6 +57,7 @@ export const portfolio: PortfolioItem[] = [
     featured: true,
     summary: "A brochure site for a private residence in Guzape, Abuja: four exterior schemes compared with a slider, fifty-one interior renders and a 360° tour.",
     cover: "/work/villa-71/cover.jpg",
+    preview: { video: "/work/villa-71/preview.mp4", poster: "/work/villa-71/preview-poster.jpg" },
     gallery: ["/work/villa-71/shot-1.jpg", "/work/villa-71/shot-2.jpg", "/work/villa-71/shot-3.jpg"],
     challenge: "The architects needed the client to choose between four exterior directions and understand seven suites, a guest chalet and a pool from renders alone.",
     approach: "A page-based brochure with a compare slider for the exterior options, an interiors gallery organised by room, and an embedded 360° tour, all served from one lightweight static site.",
@@ -70,6 +75,7 @@ export const portfolio: PortfolioItem[] = [
     featured: true,
     summary: "Eight residences on eight levels in Victoria Island, Lagos, presented as a page-turning brochure site with a thirteen-sheet print edition.",
     cover: "/work/cova-manor/cover.jpg",
+    preview: { video: "/work/cova-manor/preview.mp4", poster: "/work/cova-manor/preview-poster.jpg" },
     gallery: ["/work/cova-manor/shot-1.jpg", "/work/cova-manor/shot-2.jpg", "/work/cova-manor/shot-3.jpg"],
     challenge: "Present six duplexes and two apartments, their plans and their specification to buyers in Lagos and abroad, before completion.",
     approach: "Cover, at-a-glance figures, visualisations, plans and specification laid out like a printed book, with a location map and a print edition produced from the same content.",
@@ -86,6 +92,7 @@ export const portfolio: PortfolioItem[] = [
     year: "2026",
     summary: "A garden café inside Sarius Palmetum, Abuja: menu, WhatsApp ordering, reservations and a map, on one page that loads fast on a phone.",
     cover: "/work/lantees-cafe/cover.jpg",
+    preview: { video: "/work/lantees-cafe/preview.mp4", poster: "/work/lantees-cafe/preview-poster.jpg" },
     gallery: ["/work/lantees-cafe/shot-1.jpg", "/work/lantees-cafe/shot-2.jpg", "/work/lantees-cafe/shot-3.jpg"],
     challenge: "A café with a beautiful setting and no way for guests to see the menu, book a table or order without calling.",
     approach: "A mobile-first site that opens on the garden, puts the menu one tap away, and routes orders and reservations through WhatsApp so the team needs no new software.",

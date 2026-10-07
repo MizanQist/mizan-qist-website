@@ -25,7 +25,7 @@ Everything editable lives in `src/content/` as typed TypeScript. Components only
 | `home.ts` | Home hero, mission, "how we work" points, stats strip, closing call-to-action |
 | `labs.ts` | Labs hero, vision copy, eight focus areas, **products in development** (name, category, status, description, optional link), partner CTA |
 | `studio.ts` | Studio hero, service categories and services, industries, personal & celebrations, process steps, partner programme, form options (service types, budgets, timelines) |
-| `portfolio.ts` | Portfolio items for `/studio/work` and the case-study pages. Each item: slug, title, client, category, tags, year, summary, cover, gallery, challenge, approach, outcome, services, `featured` |
+| `portfolio.ts` | Portfolio items for `/studio/work` and the case-study pages. Each item: slug, title, client, category, tags, year, summary, cover, gallery, challenge, approach, outcome, services, `featured`, optional `link` (live site button) and optional `video` (`{ src, poster, portrait }` — the card plays it muted, the case study shows a player). Files live in `public/work/<slug>/` |
 | `private-office.ts` | Private Office hero, six services, approach points, consultation copy and form options |
 | `about.ts` | Story, mission, values, division structure copy, **team members** (first card is the Managing Director) |
 | `testimonials.ts` | Quotes shown on Home and Studio (filtered by division) |

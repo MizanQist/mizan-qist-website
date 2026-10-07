@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { portfolio, getPortfolioItem } from "@/content/portfolio";
 import { pageMetadata } from "@/lib/metadata";
 import { Container } from "@/components/ui/Container";
@@ -40,9 +40,20 @@ export default async function CaseStudyPage({ params }: Props) {
             <h1 className="mt-4 max-w-4xl text-display-lg">{item.title}</h1>
             <p className="mt-6 max-w-2xl text-lg text-muted md:text-xl">{item.summary}</p>
           </Reveal>
-          <Reveal delay={0.1} className="relative mt-12 aspect-[16/9] overflow-hidden rounded-2xl bg-surface">
-            <Image src={item.cover} alt={`${item.title} cover image`} fill priority sizes="(min-width: 1280px) 1200px, 100vw" className="object-cover" />
-          </Reveal>
+          {item.link && (
+            <a href={item.link} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 rounded-full bg-fg px-5 py-3 text-sm font-medium text-bg hover:opacity-90">
+              Visit the live site <ArrowUpRight className="size-4" aria-hidden />
+            </a>
+          )}
+          {item.video ? (
+            <Reveal delay={0.1} className="mt-12 flex justify-center rounded-2xl bg-charcoal-900 p-3 md:p-6">
+              <video src={item.video.src} poster={item.video.poster} controls playsInline preload="metadata" className={item.video.portrait ? "max-h-[80vh] rounded-xl" : "w-full rounded-xl"} />
+            </Reveal>
+          ) : (
+            <Reveal delay={0.1} className="relative mt-12 aspect-[16/9] overflow-hidden rounded-2xl bg-surface">
+              <Image src={item.cover} alt={`${item.title} cover image`} fill priority sizes="(min-width: 1280px) 1200px, 100vw" className="object-cover" />
+            </Reveal>
+          )}
         </Container>
 
         <Container className="grid gap-12 py-section-sm lg:grid-cols-[1fr_2fr] lg:gap-20">

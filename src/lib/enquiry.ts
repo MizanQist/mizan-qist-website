@@ -35,6 +35,8 @@ export const contactEnquirySchema = z.object({
   kind: z.literal("contact"),
   name,
   email,
+  whatsapp: optionalPhone,
+  contactMethod: z.string().min(1, "Tell us whether to reply by email or WhatsApp."),
   division: z.string().min(1, "Choose who you would like to reach."),
   message,
 });

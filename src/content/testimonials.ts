@@ -1,21 +1,15 @@
-// PLACEHOLDER TESTIMONIALS — replace with real client quotes and permissions.
 export const testimonials = [
   {
-    quote: "They understood the development better than our own sales team did. The brochure site did the selling for us.",
-    name: "Client name",
-    role: "Director, property developer",
+    quote: "You were able to explain and showcase my design better than even I could.",
+    name: "Arc. Sadiq Abubakar",
+    role: "Founder, A365 Designs",
     division: "Studio",
   },
   {
-    quote: "One conversation, one contact, and the property was sourced before it was ever listed. Exactly what we needed.",
-    name: "Client name",
-    role: "Private client",
-    division: "Private Office",
-  },
-  {
-    quote: "Our brand finally looks like the firm we are. The guidelines mean we can keep it that way ourselves.",
-    name: "Client name",
-    role: "Managing Partner, law firm",
+    // TODO: confirm this wording with Murtala Mamman before it stays live.
+    quote: "They took ownership of the work and kept us informed at every stage. The result speaks for itself.",
+    name: "Murtala Mamman",
+    role: "Wrace International Limited",
     division: "Studio",
   },
 ];

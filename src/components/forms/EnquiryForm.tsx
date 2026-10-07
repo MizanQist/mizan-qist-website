@@ -129,6 +129,14 @@ export function EnquiryForm({ kind, options, defaults = {}, note, submitLabel = 
           <Field label="Email" name="email" error={errors.email}>
             <Input name="email" type="email" error={errors.email} autoComplete="email" placeholder="you@company.com" required />
           </Field>
+          <div className="grid gap-5 sm:grid-cols-2">
+            <Field label="WhatsApp (optional)" name="whatsapp" error={errors.whatsapp}>
+              <Input name="whatsapp" type="tel" error={errors.whatsapp} autoComplete="tel" placeholder="+234 …" />
+            </Field>
+            <Field label="How should we reply?" name="contactMethod" error={errors.contactMethod}>
+              <Select name="contactMethod" error={errors.contactMethod} options={options.contactMethods} required />
+            </Field>
+          </div>
           <Field label="Who would you like to reach?" name="division" error={errors.division}>
             <Select name="division" error={errors.division} options={options.divisions} defaultValue={defaults.division ?? ""} required />
           </Field>

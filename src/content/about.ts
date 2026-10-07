@@ -28,31 +28,11 @@ export const about = {
     title: "Three doors into one company.",
     text: "Labs builds our products. The Studio and Private Office serve clients, and their revenue funds Labs. Knowledge flows in every direction: what we learn shipping products improves client work, and client problems become the next product.",
   },
-  // TEAM — placeholder profiles. First card is the Managing Director. Replace photos in /public/team/.
-  team: [
-    {
-      name: "Mamman Ali", // PLACEHOLDER — confirm name and title
-      role: "Managing Director",
-      bio: "Founder of Mizan Qist. Leads strategy, product direction and the Private Office relationships.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      name: "Name Surname", // PLACEHOLDER
-      role: "Head of Studio",
-      bio: "Runs the creative and technology studio, from brand systems to production builds.",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      name: "Name Surname", // PLACEHOLDER
-      role: "Head of Labs",
-      bio: "Leads product engineering across the Labs portfolio.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      name: "Name Surname", // PLACEHOLDER
-      role: "Private Office Lead",
-      bio: "Manages client relationships, sourcing and project oversight for the Private Office.",
-      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80",
-    },
-  ],
+  presence: {
+    eyebrow: "Where we are",
+    title: "Abuja, Lagos and London, and a network well beyond.",
+    text: "We have a presence in Abuja, Lagos and London, and an established network of partners and specialists across the GCC, South Africa, West Africa, Europe, Asia, and North and South America.",
+    cities: ["Abuja", "Lagos", "London"],
+    network: ["GCC", "South Africa", "West Africa", "Europe", "Asia", "North America", "South America"],
+  },
 };

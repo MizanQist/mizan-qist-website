@@ -1,20 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowUpRight, Globe, MapPin } from "lucide-react";
 import { about } from "@/content/about";
 import { divisions } from "@/content/divisions";
-import { siteConfig } from "@/content/site";
 import { pageMetadata } from "@/lib/metadata";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Icon } from "@/components/ui/Icon";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { TeamCard } from "@/components/cards/TeamCard";
 import { CTA } from "@/components/sections/CTA";
 
 export const metadata = pageMetadata({
   title: "About",
-  description: "The story, mission and values of Mizan Qist Limited, how Labs, Studio and Private Office fit together, and where to find us in Abuja, Lagos and London.",
+  description: "The story, mission and values of Mizan Qist Limited, how Labs, Studio and Private Office fit together, and where we are: Abuja, Lagos and London, with a network across the GCC, Africa, Europe, Asia and the Americas.",
   path: "/about",
 });
 
@@ -81,38 +79,29 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Leadership */}
-      <section className="py-section">
-        <Container>
-          <SectionHeading eyebrow="Leadership" title="The people behind the name." />
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {about.team.map((m, i) => (
-              <Reveal key={m.role} delay={i * 0.08}>
-                <TeamCard member={m} />
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Offices */}
+      {/* Presence */}
       <section className="border-t border-line py-section">
-        <Container>
-          <SectionHeading eyebrow="Offices" title="Abuja, Lagos and London." description="Headquartered in Nigeria's capital, with offices in Lagos and London, we work across both time zones every day." />
-          <div className="mt-12 grid gap-4 md:grid-cols-3">
-            {siteConfig.offices.map((o, i) => (
-              <Reveal key={o.city} delay={i * 0.08}>
-                <address className="flex h-full gap-5 rounded-2xl border border-line bg-card p-7 not-italic">
-                  <MapPin className="mt-1 size-5 shrink-0 text-accent" aria-hidden />
-                  <div>
-                    <p className="eyebrow">{o.label}</p>
-                    <p className="mt-2 text-display-sm">{o.city}, {o.country}</p>
-                    <p className="mt-3 text-sm leading-relaxed text-muted">{o.lines.join(", ")}</p>
-                    <p className="mt-1 text-sm text-muted">{o.hours}</p>
-                  </div>
-                </address>
-              </Reveal>
-            ))}
+        <Container className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
+          <SectionHeading eyebrow={about.presence.eyebrow} title={about.presence.title} description={about.presence.text} />
+          <div className="grid gap-6 sm:grid-cols-2">
+            <Reveal>
+              <div className="h-full rounded-2xl border border-line bg-card p-7">
+                <MapPin className="size-5 text-accent" aria-hidden />
+                <p className="eyebrow mt-5">Presence</p>
+                <ul className="mt-3 space-y-1 text-display-sm">
+                  {about.presence.cities.map((c) => <li key={c}>{c}</li>)}
+                </ul>
+              </div>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <div className="h-full rounded-2xl border border-line bg-card p-7">
+                <Globe className="size-5 text-accent" aria-hidden />
+                <p className="eyebrow mt-5">Established network</p>
+                <ul className="mt-3 flex flex-wrap gap-2">
+                  {about.presence.network.map((r) => <li key={r} className="rounded-full border border-line px-3 py-1 text-sm">{r}</li>)}
+                </ul>
+              </div>
+            </Reveal>
           </div>
         </Container>
       </section>

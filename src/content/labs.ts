@@ -27,14 +27,14 @@ export const labs = {
   ],
   // PRODUCTS IN DEVELOPMENT — placeholder entries; edit freely. `link` is optional.
   products: [
-    { name: "Ledgerline", category: "Fintech", status: "In Development" as ProductStatus, description: "Invoicing, receivables and cash-flow visibility for small firms in West Africa." },
-    { name: "Lumen", category: "Analytics", status: "Beta" as ProductStatus, description: "Real-time performance dashboards for retail and hospitality operators." },
+    { name: "Ledgerline", category: "Fintech", status: "Concept" as ProductStatus, description: "Invoicing, receivables and cash-flow visibility for small firms in West Africa." },
+    { name: "Lumen", category: "Analytics", status: "Concept" as ProductStatus, description: "Real-time performance dashboards for retail and hospitality operators." },
     { name: "Qist Market", category: "Marketplaces", status: "Concept" as ProductStatus, description: "A verified-listing property marketplace with escrow-backed transactions." },
     { name: "Atlas Commerce", category: "E-commerce Infrastructure", status: "Concept" as ProductStatus, description: "Headless storefront and checkout infrastructure for African consumer brands." },
-    { name: "Signal", category: "AI / ML", status: "In Development" as ProductStatus, description: "Document intelligence for legal, property and professional-services teams." },
-    { name: "Perch", category: "Apps", status: "Beta" as ProductStatus, description: "A private concierge and services app for residents of managed estates." },
+    { name: "Signal", category: "AI / ML", status: "Concept" as ProductStatus, description: "Document intelligence for legal, property and professional-services teams." },
+    { name: "Perch", category: "Apps", status: "Concept" as ProductStatus, description: "A private concierge and services app for residents of managed estates." },
     { name: "Hollow Point", category: "Gaming", status: "Concept" as ProductStatus, description: "A studio label for lightweight competitive mobile games." },
-    { name: "Portfolio", category: "SaaS", status: "Live" as ProductStatus, description: "Private, invitation-only portfolio sites for owners of high-value assets.", link: "/private-office" },
+    { name: "Private Office", category: "SaaS", status: "Live" as ProductStatus, description: "Private, invitation-only portfolio sites and sourcing for owners of high-value assets.", link: "/private-office" },
   ],
   partner: {
     eyebrow: "Partner or invest",

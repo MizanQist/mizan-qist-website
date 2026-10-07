@@ -26,7 +26,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
         <div>
           <SectionHeading as="h1" size="lg" eyebrow="Contact" title="Start a conversation." description="Choose the division you would like to reach and tell us a little about what you need. We reply within one working day." />
           <Reveal className="mt-12">
-            <EnquiryForm kind="contact" options={{ divisions: divisionOptions }} defaults={defaults} submitLabel="Send message" />
+            <EnquiryForm kind="contact" options={{ divisions: divisionOptions, contactMethods: ["Email", "WhatsApp"] }} defaults={defaults} submitLabel="Send message" />
           </Reveal>
         </div>
 

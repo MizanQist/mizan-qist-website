@@ -1,4 +1,5 @@
 export const mainNav = [
+  { label: "Home", href: "/" },
   { label: "Labs", href: "/labs" },
   { label: "Studio", href: "/studio" },
   { label: "Private Office", href: "/private-office" },

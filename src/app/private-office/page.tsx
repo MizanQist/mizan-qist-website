@@ -38,7 +38,7 @@ export default function PrivateOfficePage() {
           <SectionHeading eyebrow="Services" title="What we arrange." description="Each engagement is personal. These are the areas in which we are most often asked to help." />
           <ul className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-2 lg:grid-cols-3">
             {privateOffice.services.map((s, i) => (
-              <li key={s.title} className="bg-bg">
+              <li key={s.title} className="bg-bg md:last:col-span-2 lg:last:col-span-3">
                 <Reveal delay={(i % 3) * 0.08} className="h-full p-8 md:p-10">
                   <Icon name={s.icon} className="size-5 text-office" />
                   <h3 className="mt-7 text-display-sm font-light">{s.title}</h3>

@@ -10,7 +10,7 @@ export const siteConfig = {
   // Used for canonical URLs, Open Graph tags, sitemap and robots.
   url: "https://mizanqist.com",
   description:
-    "Mizan Qist Limited is a technology company building its own products, with a creative and technology studio and a private advisory office that serve clients in Nigeria and the United Kingdom.",
+    "Mizan Qist Limited is a technology company building its own products, with a creative and technology studio and a private advisory office that serve clients wherever they are in the world.",
   email: "info@mizanqist.com",
   phones: [
     { label: "Nigeria", display: "+234 808 666 6206", href: "tel:+2348086666206" },
